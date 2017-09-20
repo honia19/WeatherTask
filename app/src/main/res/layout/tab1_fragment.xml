@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/refresh1"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"
+                android:text="@string/weather_in_city"
+
+                />
+            <ImageView
+                android:id="@+id/img_icon_weather"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="19dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_city"
+                android:layout_margin="20dp"
+                android:layout_alignParentEnd="true"/>
+            <TextView
+                android:id="@+id/tv_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weather_temperature"
+                android:textSize="25sp"
+                android:layout_alignBottom="@+id/img_icon_weather"
+                android:layout_toStartOf="@+id/tv_city"/>
+            <TextView
+                android:id="@+id/tv_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rain"
+                android:layout_below="@id/img_icon_weather"
+                android:layout_alignParentEnd="true"
+                android:textSize="25sp"
+                android:padding="10dp"/>
+
+
+</RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>
