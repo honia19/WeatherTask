@@ -33,6 +33,16 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.ViewHolder>
         }
     }
 
+    public ArrayList<Cities> getCity()
+    {
+        return city;
+    }
+
+    public void setCity(ArrayList<Cities> city)
+    {
+        this.city = city;
+    }
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {

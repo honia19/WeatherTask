@@ -82,7 +82,7 @@ public class Tab1Fragment extends Fragment implements SwipeRefreshLayout.OnRefre
                 city();
                 mSwipeRefreshLayout.setRefreshing(false);
             }
-        }, 1500);
+        }, 4000);
     }
 
     private class MyAsyncTask extends AsyncTask<String, Void, MyPojo>
@@ -91,7 +91,7 @@ public class Tab1Fragment extends Fragment implements SwipeRefreshLayout.OnRefre
         protected void onPostExecute(MyPojo myPojo)
         {
             super.onPostExecute(myPojo);
-            for(List l : myPojo.getList() )
+            for(List l : myPojo.getList())
             {
                 tv_temp.setText("" + Math.round((Double.parseDouble(l.getMain().getTemp()) - 273.15)) + " \u2103");
                 for (Weather w : l.getWeather())
